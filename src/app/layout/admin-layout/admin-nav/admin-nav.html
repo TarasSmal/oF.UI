@@ -1,0 +1,33 @@
+<header class="header">
+  <button class="header-hamburger-trigger" type="button"><span></span></button>
+
+  <div class="branding">
+      <a class="logo-and-title" routerlink="/" href="/">
+          <img class="original-softlab-logo" src="../../../../assets/img/logo.png">
+          <!-- <div class="clr-icon original-softlab-logo"></div> -->
+          <!-- <span class="title"> 'shared.headerName' | translate </span> -->
+      </a>
+  </div>
+
+  <nav class="header-nav">
+      <a class="nav-link" routerLink="/admin" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+          <span class="nav-text"> Home </span>
+      </a>
+      <a class="nav-link" routerLink="/admin" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+          <span class="nav-text"> Dashboard </span>
+      </a>
+      <a class="nav-link" routerLink="/admin" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+          <span class="nav-text"> Users </span>
+      </a>
+      <a class="nav-link" routerLink="/admin" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+          <span class="nav-text"> Permissions </span>
+      </a>
+      <div style="flex-grow: 1"></div>
+      <a class="nav-link" routerLink="/admin" routerlinkactive="active">
+          <span class="nav-text"> 'shared.navMenu.carrer' | translate </span>
+      </a>
+      <a class="nav-link" routerLink="/admin" routerlinkactive="active">
+          <span class="nav-text"> 'shared.navMenu.contacs' | translate </span>
+      </a>
+  </nav>
+</header>

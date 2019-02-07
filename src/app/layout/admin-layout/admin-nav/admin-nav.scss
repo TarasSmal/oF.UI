@@ -1,0 +1,160 @@
+// @import '../../../../main.scss';
+$main-color: #002538;
+$main-white: #fafafa;
+@mixin hamburger-menu-trigger-animation() {
+    &>span {
+        background: transparent;
+        &::before,
+        &::after {
+            left: 0.125rem;
+            transform-origin: 9%;
+            transition: transform (2 *.3) ease
+        }
+        &::before {
+            transform: rotate(45deg);
+        }
+        &::after {
+            transform: rotate(-45deg);
+        }
+    }
+}
+
+.header {
+    background-color: $main-color;
+    display: flex;
+    color: #fafafa;
+    height: 2.5rem;
+    // justify-content: space-between;
+    white-space: nowrap;
+    .header-hamburger-trigger {
+        @include hamburger-menu-trigger-animation();
+        display: none;
+        &>span,
+        &>span::before,
+        &>span::after {
+            display: inline-block;
+            height: 0.0833333rem;
+            width: 1rem;
+            background: #fafafa;
+            border-radius: 0.125rem;
+        }
+        &>span {
+            position: relative;
+            vertical-align: middle;
+            &::before,
+            &::after {
+                content: '';
+                position: absolute;
+                left: 0;
+            }
+            &::before {
+                top: -.291667rem;
+                ;
+            }
+            &::after {
+                bottom: -.291667rem;
+            }
+        }
+        &.active {
+            @include hamburger-menu-trigger-animation();
+        }
+    }
+    .branding {
+        display: flex;
+        flex: 0 0 auto;
+        padding: 0 1rem;
+        height: 2.5rem;
+        .logo-and-title {
+            display: flex;
+            /* justify-content: center; */
+            align-items: center;
+        }
+        .original-softlab-logo {
+            // width: 33.3%;
+        }
+        .title {
+            font-size: .666667rem;
+            font-weight: 400;
+            font-family: Metropolis, "Avenir Next", "Helvetica Neue", Arial, sans-serif;
+            letter-spacing: .01em;
+            color: #fafafa;
+            line-height: 2.5rem;
+            text-decoration: none;
+        }
+    }
+    .header-nav {
+        display: flex;
+        flex: 0 0 auto;
+        height: 2.5rem;
+        padding: 0 16px;
+        .nav-link {
+            color: #fafafa;
+            opacity: .65;
+            &.active {
+                background: rgba(255, 255, 255, .15);
+                opacity: 1;
+            }
+            &:hover {
+                opacity: 1;
+            }
+            .nav-text {
+                line-height: 2.5rem;
+                padding: 0 1rem;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        .header-nav {
+            //todo: lated delete
+            margin-left: unset;
+            z-index: 1;
+            flex-direction: column;
+            align-items: center;
+        }
+        .branding {
+            justify-content: center;
+            .logo-and-title {
+                justify-content: center;
+            }
+        }
+    }
+    .header-hamburger-trigger,
+        {
+        display: inline-block;
+        border: 0;
+        background: 0 0;
+        cursor: pointer;
+        font-size: 1rem;
+        height: 2.5rem;
+        width: 2.5rem;
+        padding: 0 0 .166667rem;
+        text-align: center;
+        white-space: nowrap;
+        color: #fafafa;
+        opacity: .65;
+    }
+}
+
+// @mixin overflow-menu-trigger-animation() {
+//   &>span {
+//     background: transparent;
+//     &::before,
+//     &::after {
+//       height: 0.0833333rem;
+//       width: 1rem;
+//       left: -0.25rem;
+//       transform-origin: -3%;
+//       transition: $clr-trigger-animation;
+//     }
+//     &::before {
+//       transform: rotate(45deg);
+//     }
+//     &::after {
+//       transform: rotate(-45deg);
+//     }
+//   }
+// }

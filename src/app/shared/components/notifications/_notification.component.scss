@@ -1,0 +1,43 @@
+.app-notifications-wrapper {
+  fixed: 0 false false 50%;
+  z-index: 1000;
+  transform: translateX(-50%);
+  width: 360px;
+  max-width: 100%;
+  user-select: none;
+}
+
+.single-notification {
+  position: relative;
+  padding-bottom: 10px;
+  transform-origin: 50% 0;
+
+  &__inner {
+    size: 100% 80px;
+    background: $col-info;
+    color: $col-primary;
+    fill: $col-primary;
+    text-transform: uppercase;
+    display: table;
+  }
+
+  &__icon-cell {
+    display: table-cell;
+    vertical-align: top;
+    text-align: right;
+    width: 62px;
+    padding-top: 24px;
+
+    .svgi {
+      fill: $col-primary;
+      height: 30px;
+      width: 30px;
+    }
+  }
+
+  &__text-cell {
+    display: table-cell;
+    vertical-align: middle;
+    padding: 15px 8px 15px;
+  }
+}

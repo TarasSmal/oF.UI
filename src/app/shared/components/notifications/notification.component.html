@@ -1,0 +1,15 @@
+<div class="single-notification" [@enterLeave]="item.state">
+    <div class="single-notification__inner">
+        <div class="single-notification__icon-cell">
+            <svg class="svgi svgi--ok-circled single-notification__icon">
+                <use xlink:href="sprite.svg#ok-circled" />
+            </svg>
+        </div>
+
+        <div class="single-notification__text-cell">
+            <div class="single-notification__title">
+                {{ item.title }}
+            </div>
+        </div>
+    </div>
+</div>

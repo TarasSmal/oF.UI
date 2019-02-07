@@ -1,0 +1,28 @@
+<h2>Login</h2>
+
+<form [formGroup]="loginFormGroup" 
+      (ngSubmit)="onSubmit()"
+      class="login-form"
+      >
+      <mat-form-field>
+        <input matInput 
+               placeholder="Enter your email" 
+               formControlName="email" 
+               required>
+
+        <mat-error *ngIf="loginFormGroup.get('email').invalid">getErrorMessage()</mat-error>
+      </mat-form-field>
+
+    <mat-form-field>
+        <input matInput 
+               placeholder="Enter your password"
+               formControlName="password" 
+               [type]="hide ? 'password' : 'text'">
+
+        <mat-icon matSuffix (click)="hide = !hide">
+            {{hide ? 'visibility_off' : 'visibility'}}
+        </mat-icon>
+      </mat-form-field>
+
+    <button mat-button color="primary">Login</button>
+</form>
