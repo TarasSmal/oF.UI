@@ -6,6 +6,7 @@ import { AppComponent } from '@app/app.component';
 import { SharedModule } from '@app/shared';
 import { LoginModule } from '@app/login';
 import { LayoutModule } from './layout/layout.module';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,8 @@ import { LayoutModule } from './layout/layout.module';
     BrowserModule,
     LayoutModule,
     // AppRoutingModule,
+    RouterModule.forRoot([]),
+    LayoutModule,
     SharedModule,
     LoginModule
   ],

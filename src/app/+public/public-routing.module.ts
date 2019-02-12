@@ -2,15 +2,16 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { AdminComponent } from '@app/+admin/admin.component';
-import { FormViewComponent } from './components/form-view/form-view.component';
-
+import { PublicComponent } from './public.component';
 @NgModule({
   imports: [
     CommonModule,
     RouterModule.forChild([
-      { path: '', component: AdminComponent },
-      { path: 'form/:id/:viewId', component: FormViewComponent }
+      { path: '', component: PublicComponent },
     ]),
+  ],
+  exports: [
+    RouterModule,
   ]
 })
-export class AdminRoutingModule { }
+export class PublicRoutingModule { }
