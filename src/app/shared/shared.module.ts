@@ -16,6 +16,7 @@ import { HttpClientModule } from '@angular/common/http';
   ],
   exports: [
     BrowserAnimationsModule,
+    CommonModule,
     NotificationComponent,
     LetDirective,
     MaterialModule,

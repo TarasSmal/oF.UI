@@ -22,4 +22,8 @@ export class ViewService {
 
         return this.api.get(`${this.path}`);
     }
+
+    getData(id) {
+        return this.api.get(`${this.path}/get-data/${id}`);
+    }
 }

@@ -19,6 +19,8 @@ export class FormViewComponent implements OnInit {
     formId: any;
     viewId: any;
     paramsSub: any;
+    loadedColumns: string[];
+    loadedData: any;
 
     /**
      *
@@ -47,6 +49,11 @@ export class FormViewComponent implements OnInit {
         ).subscribe(([form, views]) => {
             this.form = form;
             this.views = views;
+
+            this.viewService.getData(views[0].id).subscribe(data => {
+                this.loadedData = data[0];
+                this.loadedColumns = Object.keys(data[0]);
+            });
         });
     }
 }

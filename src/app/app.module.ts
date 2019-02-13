@@ -7,13 +7,15 @@ import { SharedModule } from '@app/shared';
 import { LoginModule } from '@app/login';
 import { LayoutModule } from './layout/layout.module';
 import { RouterModule } from '@angular/router';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
   declarations: [
     AppComponent,
   ],
   imports: [
-    BrowserModule,
+    CommonModule,
+    // BrowserModule,
     LayoutModule,
     // AppRoutingModule,
     RouterModule.forRoot([]),

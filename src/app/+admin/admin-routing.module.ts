@@ -9,7 +9,7 @@ import { FormViewComponent } from './components/form-view/form-view.component';
     CommonModule,
     RouterModule.forChild([
       { path: '', component: AdminComponent },
-      { path: 'form/:id/:viewId', component: FormViewComponent }
+      { path: 'form/:id', component: FormViewComponent }
     ]),
   ]
 })
