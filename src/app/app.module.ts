@@ -1,5 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
+import { ClarityModule } from "@clr/angular";
 
 import { AppRoutingModule } from '@app/app-routing.module';
 import { AppComponent } from '@app/app.component';
@@ -14,8 +16,11 @@ import { CommonModule } from '@angular/common';
     AppComponent,
   ],
   imports: [
+    BrowserModule,
+        BrowserAnimationsModule,
+        ClarityModule,
     CommonModule,
-    // BrowserModule,
+    BrowserModule,
     LayoutModule,
     // AppRoutingModule,
     RouterModule.forRoot([]),

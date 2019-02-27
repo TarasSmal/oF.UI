@@ -6,6 +6,10 @@ import { LayoutRoutingModule } from '@app/layout/layout-routing.module';
 import { AdminNavComponent } from '@app/layout/admin-layout/admin-nav/admin-nav';
 import { PublicLayoutComponent } from './public-layout/public-layout.component';
 
+import { ClarityIcons } from '@clr/icons';
+import { ClarityModule } from '@clr/angular';
+
+
 @NgModule({
     declarations: [
         AdminLayoutComponent,
@@ -14,6 +18,7 @@ import { PublicLayoutComponent } from './public-layout/public-layout.component';
     ],
     imports: [
         LayoutRoutingModule,
+        ClarityModule,
         SharedModule
     ],
     exports: [LayoutRoutingModule]
